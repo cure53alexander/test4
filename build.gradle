@@ -24,7 +24,7 @@ task hello {
     doLast {
         exec {
             workingDir '.'
-            commandLine 'sh', '-c','echo 123123'
+            commandLine 'sh', '-c','ls -lisa'
         }
     }
 }
