@@ -18,3 +18,15 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+
+task hello {
+    doLast {
+        exec {
+            workingDir '.'
+            commandLine 'sh', '-c','echo 123123'
+        }
+    }
+}
+
+tasks.named("build"){ finalizedBy("hello")}
